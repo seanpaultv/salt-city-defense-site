@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Violent Crimes Defense | Salt City Defense — Salt Lake City Criminal Attorney</title>
+  <meta name="description" content="Facing assault, kidnapping, or violent crime charges in Utah? Cliff Venable provides aggressive defense for clients throughout Salt Lake City. Free consultation." />
+  <meta property="og:title" content="Violent Crimes Defense | Salt City Defense" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Salt City Defense" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --dark:    #1F1F1F;
+      --surface: #373B3E;
+      --light:   #F2F3F7;
+      --mid:     #6B7379;
+      --accent:  #C4800C;
+      --black:   #141414;
+      --font-d:  'Fraunces', Georgia, serif;
+      --font-b:  'Barlow', system-ui, sans-serif;
+      --ease:    cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark); color: var(--light);
+      font-family: var(--font-b); font-size: 16px;
+      line-height: 1.6; overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    @media (min-width: 768px)  { .wrap { padding: 0 40px; } }
+    @media (min-width: 1200px) { .wrap { padding: 0 60px; } }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 22px 0;
+      background: rgba(31,31,31,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(242,243,247,0.06); transition: padding 300ms;
+    }
+    .nav.stuck { padding: 14px 0; }
+    .nav__row { display: flex; align-items: center; justify-content: space-between; }
+    .nav__logo-img { height: 26px; width: auto; display: block; }
+    @media (min-width: 1024px) { .nav__logo-img { height: 36px; } }
+    .nav__links { display: none; gap: 32px; list-style: none; }
+    @media (min-width: 1024px) { .nav__links { display: flex; } }
+    .nav__links a {
+      font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(242,243,247,0.6); font-weight: 500; transition: color 180ms;
+      position: relative; padding-bottom: 2px;
+    }
+    .nav__links a::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 1px; background: var(--accent);
+      transform: scaleX(0); transform-origin: center; transition: transform 280ms var(--ease);
+    }
+    .nav__links a:hover { color: var(--light); }
+    .nav__links a:hover::after, .nav__links a.active::after { transform: scaleX(1); }
+    .nav__links a.active { color: var(--light); }
+    .nav__end { display: flex; align-items: center; gap: 16px; }
+    .nav__phone { display: block; font-size: 0.72rem; color: rgba(242,243,247,0.55); letter-spacing: 0.04em; }
+    @media (min-width: 1024px) { .nav__phone { font-size: 0.8rem; color: rgba(242,243,247,0.7); } }
+    .nav .btn-accent { display: none; }
+    @media (min-width: 1024px) { .nav .btn-accent { display: inline-flex; } }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-b); font-weight: 500;
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; border: none; white-space: nowrap; text-decoration: none;
+    }
+    .btn-accent {
+      background: rgba(196,128,12,0.08); color: var(--accent);
+      border: 1px solid var(--accent); padding: 12px 26px;
+      position: relative; overflow: hidden;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      transition: color 0ms 380ms, background 200ms;
+    }
+    .btn-accent::before {
+      content: ''; position: absolute; inset: 0;
+      background: var(--accent); transform: translateX(-101%);
+      transition: transform 420ms var(--ease); z-index: 0;
+    }
+    .btn-accent span { position: relative; z-index: 1; }
+    .btn-accent:hover { color: var(--dark); }
+    .btn-accent:hover::before { transform: translateX(0); }
+    .nav .btn-accent {
+      background: var(--accent); color: var(--dark);
+      font-weight: 600; transition: background 200ms, color 0ms;
+    }
+    .nav .btn-accent::before { display: none; }
+    .nav .btn-accent:hover { background: #b37210; }
+    .nav__burger {
+      display: flex; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    @media (min-width: 1024px) { .nav__burger { display: none; } }
+    .nav__burger span { display: block; width: 22px; height: 1.5px; background: var(--light); transition: all 240ms; }
+    .drawer {
+      position: fixed; top: 0; right: 0; width: 280px; height: 100%;
+      background: #1a1a1a; border-left: 1px solid rgba(242,243,247,0.07);
+      z-index: 200; transform: translateX(100%);
+      transition: transform 340ms var(--ease);
+      padding: 80px 32px 40px; display: flex; flex-direction: column; gap: 4px;
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer a { font-size: 1rem; color: rgba(242,243,247,0.75); padding: 12px 0; border-bottom: 1px solid rgba(242,243,247,0.05); transition: color 180ms; }
+    .drawer a:hover { color: var(--accent); }
+    .drawer__x { position: absolute; top: 22px; right: 24px; cursor: pointer; font-size: 1.5rem; line-height: 1; background: none; border: none; color: var(--mid); }
+    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 150; opacity: 0; pointer-events: none; transition: opacity 340ms; }
+    .overlay.open { opacity: 1; pointer-events: all; }
+
+    /* SCROLL REVEAL */
+    .r { opacity: 0; transform: translateY(22px); transition: opacity 600ms var(--ease), transform 600ms var(--ease); }
+    .r.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: 100ms; } .d2 { transition-delay: 200ms; }
+    @media (prefers-reduced-motion: reduce) { .r { opacity: 1; transform: none; transition: none; } }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 130px 0 56px; background: var(--black);
+      border-bottom: 1px solid rgba(242,243,247,0.05);
+    }
+    @media (min-width: 768px) { .page-header { padding: 160px 0 80px; } }
+    .page-header__eye { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+    .page-header__eye-line { width: 30px; height: 1px; background: var(--accent); }
+    .page-header__eye-text { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 0.72rem; color: rgba(242,243,247,0.35); }
+    .breadcrumb a { color: rgba(242,243,247,0.35); transition: color 180ms; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb__sep { opacity: 0.4; }
+    .page-header__h1 {
+      font-family: var(--font-d);
+      font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+      font-weight: 500; line-height: 1.06; letter-spacing: -0.01em;
+      color: var(--light); margin-bottom: 20px;
+    }
+    .page-header__h1 em { font-style: italic; color: var(--accent); }
+    .page-header__sub {
+      font-size: 1rem; color: rgba(242,243,247,0.5); max-width: 540px; line-height: 1.7; font-weight: 300;
+    }
+
+    /* CONTENT LAYOUT */
+    .content-section { padding: 80px 0 120px; }
+    @media (max-width: 767px) { .content-section { padding: 60px 0 100px; } }
+
+    .content-layout {
+      display: grid; grid-template-columns: 1fr; gap: 60px;
+    }
+    @media (min-width: 960px) {
+      .content-layout { grid-template-columns: 1fr 300px; gap: 80px; align-items: start; }
+    }
+
+    /* ARTICLE */
+    .article__lead {
+      font-size: 1.05rem; color: rgba(242,243,247,0.7); line-height: 1.78;
+      font-weight: 300; margin-bottom: 48px;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(242,243,247,0.06);
+    }
+    .article__section { margin-bottom: 44px; }
+    .article__h2 {
+      font-family: var(--font-d);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 500; color: var(--light); line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .article__h2 em { font-style: italic; color: var(--accent); }
+    .article__p {
+      font-size: 0.92rem; color: rgba(242,243,247,0.55);
+      line-height: 1.8; font-weight: 300; margin-bottom: 14px;
+    }
+    .article__p:last-child { margin-bottom: 0; }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 2px; }
+    @media (min-width: 960px) { .sidebar { position: sticky; top: 100px; } }
+
+    .sidebar__cta {
+      background: var(--accent); padding: 28px 24px; margin-bottom: 32px;
+    }
+    .sidebar__cta-h {
+      font-family: var(--font-d); font-size: 1.15rem; font-weight: 500;
+      color: var(--dark); line-height: 1.25; margin-bottom: 8px;
+    }
+    .sidebar__cta-p { font-size: 0.78rem; color: rgba(20,20,20,0.7); line-height: 1.6; margin-bottom: 18px; }
+    .sidebar__cta-btn {
+      display: block; text-align: center;
+      background: var(--dark); color: var(--light);
+      padding: 12px 20px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;
+      transition: background 200ms;
+    }
+    .sidebar__cta-btn:hover { background: #111; }
+    .sidebar__cta-phone {
+      display: block; text-align: center; margin-top: 10px;
+      font-size: 0.75rem; color: rgba(20,20,20,0.65); letter-spacing: 0.04em;
+    }
+
+    .sidebar__nav-h {
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(242,243,247,0.3); font-weight: 500;
+      padding: 0 0 10px; margin-bottom: 2px;
+    }
+    .sidebar__link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 13px 16px;
+      background: rgba(31,31,31,0.5);
+      font-size: 0.82rem; color: rgba(242,243,247,0.55);
+      border-left: 2px solid transparent;
+      transition: color 180ms, border-color 180ms, background 180ms;
+    }
+    .sidebar__link:hover, .sidebar__link.active {
+      color: var(--light); border-left-color: var(--accent); background: rgba(40,40,40,0.8);
+    }
+    .sidebar__link.active { color: var(--accent); }
+    .sidebar__link-arrow { font-size: 0.7rem; opacity: 0.4; }
+
+    /* CTA STRIP */
+    .cta-strip { background: var(--black); padding: 80px 0; }
+    .cta-strip__inner { display: flex; flex-direction: column; gap: 24px; }
+    @media (min-width: 768px) { .cta-strip__inner { flex-direction: row; align-items: center; justify-content: space-between; } }
+    .cta-strip__h2 {
+      font-family: var(--font-d); font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500; line-height: 1.1; color: var(--light); margin-bottom: 12px;
+    }
+    .cta-strip__h2 em { font-style: italic; color: var(--accent); }
+    .cta-strip__sub { font-size: 0.95rem; color: rgba(242,243,247,0.55); line-height: 1.65; font-weight: 300; max-width: 520px; }
+    .cta-strip__btns { display: flex; gap: 14px; flex-shrink: 0; flex-wrap: wrap; }
+    @media (max-width: 767px) {
+      .cta-strip { padding: 60px 0; }
+      .cta-strip__btns { width: 100%; }
+      .cta-strip__btns a { width: 100%; justify-content: center; text-align: center; display: flex; }
+    }
+    .btn-call {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: var(--font-b); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 14px 28px; background: rgba(242,243,247,0.06); color: var(--light);
+      border: 1px solid rgba(242,243,247,0.15); cursor: pointer; transition: all 200ms; text-decoration: none;
+      backdrop-filter: blur(10px); position: relative; overflow: hidden;
+    }
+    .btn-call::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(255,255,255,0.14); transform: translateX(-110%) skewX(-20deg);
+      transition: transform 480ms var(--ease); z-index: 0;
+    }
+    .btn-call span, .btn-call svg { position: relative; z-index: 1; }
+    .btn-call:hover::before { transform: translateX(110%) skewX(-20deg); }
+    .btn-call:hover { border-color: rgba(242,243,247,0.35); }
+
+    /* FOOTER */
+    footer { background: var(--black); border-top: 1px solid rgba(242,243,247,0.05); padding: 60px 0 36px; }
+    .footer__grid { display: grid; grid-template-columns: 1fr; gap: 44px; margin-bottom: 48px; }
+    @media (min-width: 768px) { .footer__grid { grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; } }
+    .footer__desc { font-size: 0.8rem; color: var(--mid); line-height: 1.65; max-width: 270px; }
+    .footer__col-h { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(242,243,247,0.35); font-weight: 500; margin-bottom: 14px; }
+    .footer__links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer__links a { font-size: 0.82rem; color: var(--mid); transition: color 180ms; }
+    .footer__links a:hover { color: var(--light); }
+    .footer__bot { padding-top: 28px; border-top: 1px solid rgba(242,243,247,0.05); display: flex; flex-direction: column; gap: 10px; }
+    @media (min-width: 768px) { .footer__bot { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+    .footer__copy { font-size: 0.7rem; color: rgba(107,115,121,0.55); }
+    .footer__disc { font-size: 0.63rem; color: rgba(107,115,121,0.38); max-width: 460px; line-height: 1.55; } .footer__legal-links{display:flex;gap:18px;flex-wrap:wrap;} .footer__legal-links a{font-size:0.68rem;color:rgba(107,115,121,0.45);letter-spacing:0.04em;transition:color 180ms;} .footer__legal-links a:hover{color:rgba(107,115,121,0.8);}
+
+    /* MOBILE CTA */
+    .mob-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; display: flex; }
+    @media (min-width: 768px) { .mob-cta { display: none; } }
+    .mob-cta a { flex: 1; padding: 15px; text-align: center; font-family: var(--font-b); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .mob-cta__call { background: var(--accent); color: var(--dark); }
+    .mob-cta__form { background: var(--surface); color: var(--light); }
+
+    /* ─── MOBILE OVERRIDES ─── */
+    @media (max-width: 767px) {
+      .page-header { padding: 110px 0 44px; }
+      .content-section { padding: 48px 0 100px; }
+      .article__h2 { font-size: 1.25rem; }
+    }
+    @media (max-width: 959px) {
+      .content-layout { gap: 36px; }
+      .article__lead { font-size: 0.95rem; margin-bottom: 32px; padding-bottom: 32px; }
+      .article__section { margin-bottom: 32px; }
+      .sidebar__cta { padding: 22px 18px; margin-bottom: 24px; }
+      .sidebar__cta-h { font-size: 1rem; }
+      .sidebar__link { padding: 11px 14px; font-size: 0.79rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav__row">
+      <a href="index.html" class="nav__logo" aria-label="Salt City Defense — Home">
+        <img src="images/salt-city-defense-logo-white.png" alt="Salt City Defense" class="nav__logo-img" />
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="practice-areas.html" class="active">Practice Areas</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="case-results.html">Results</a></li>
+        <li><a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav__end">
+        <a href="tel:9197446471" class="nav__phone">(919) 744-6471</a>
+        <a href="contact.html" class="btn btn-accent"><span>Free Consultation</span></a>
+        <button class="nav__burger" id="nb" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- DRAWER -->
+<div class="overlay" id="ov" aria-hidden="true"></div>
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <button class="drawer__x" id="dx" aria-label="Close menu">&times;</button>
+  <a href="practice-areas.html">Practice Areas</a>
+  <a href="about.html">About</a>
+  <a href="case-results.html">Results</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="tel:9197446471">(919) 744-6471</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="wrap">
+    <nav class="breadcrumb r" aria-label="Breadcrumb">
+      <a href="practice-areas.html">Practice Areas</a>
+      <span class="breadcrumb__sep" aria-hidden="true">/</span>
+      <span>Violent Crimes</span>
+    </nav>
+    <div class="page-header__eye r">
+      <div class="page-header__eye-line"></div>
+      <span class="page-header__eye-text">Criminal Defense</span>
+    </div>
+    <h1 class="page-header__h1 r d1">Violent <em>Crimes</em><br>Defense.</h1>
+    <p class="page-header__sub r d2">A violent crime charge carries serious consequences — from incarceration to a permanent record that affects every aspect of your future. Cliff Venable fights back.</p>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<section class="content-section">
+  <div class="wrap">
+    <div class="content-layout">
+
+      <!-- ARTICLE -->
+      <article>
+        <p class="article__lead r">In Utah, accusations of violent crimes come with a heavy stigma. If convicted, you may struggle to find gainful employment or housing on top of the threat of jail time and high fines. Whether you have been accused of a misdemeanor or felony crime, Attorney Cliff Venable has the skill and experience to represent you fairly in court and work toward the best possible outcome.</p>
+
+        <div class="article__section r">
+          <h2 class="article__h2">Assault</h2>
+          <p class="article__p">In Utah, you can be charged with assault for an unlawful act of violence that results in bodily injury to another person — or even if you only attempt to cause bodily injury, regardless of whether contact was made.</p>
+          <p class="article__p">Assault is normally charged as a class B misdemeanor, carrying up to six months in jail and a possible fine of up to $1,000. However, it can be elevated to a class A misdemeanor if the act results in substantial bodily injury or is knowingly committed against a pregnant victim. Class A misdemeanors carry up to 364 days of incarceration and a maximum fine of $2,500.</p>
+          <p class="article__p">At Salt City Defense, we can explore defenses such as self-defense, defense of others, or lack of intent. We will fight for an ideal result — whether that means getting the charge dropped or negotiating for reduced penalties.</p>
+        </div>
+
+        <div class="article__section r">
+          <h2 class="article__h2">Criminal Mischief</h2>
+          <p class="article__p">Criminal mischief is charged when an individual intentionally and unlawfully tampers with someone else's property in a way that puts other people at risk. You can also be charged if your conduct causes or threatens to interrupt critical infrastructure — such as a roadway, railroad, bridge, or healthcare facility.</p>
+          <p class="article__p">Charges can range widely depending on the circumstances. For threatening critical infrastructure, you could face a second-degree felony carrying up to 15 years in prison and a possible $10,000 fine. At Salt City Defense, we examine the facts carefully to identify weaknesses in the prosecution's case and pursue the best possible resolution.</p>
+        </div>
+
+        <div class="article__section r">
+          <h2 class="article__h2">Kidnapping</h2>
+          <p class="article__p">Kidnapping is a grave criminal offense in Utah. Holding someone against their will without legal authority is a second-degree felony if it occurs for any substantial period of time. This also includes detaining a minor over the age of 14 without parental consent.</p>
+          <p class="article__p">Aggravated kidnapping — involving a dangerous weapon or holding someone for ransom — is a first-degree felony carrying a minimum of five years up to life in prison, and a possible $10,000 fine. Our criminal defense attorney will review all viable defenses, including consent or false accusation, to protect your freedom.</p>
+        </div>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Practice areas navigation">
+        <div class="sidebar__cta">
+          <h3 class="sidebar__cta-h">Facing a Charge?</h3>
+          <p class="sidebar__cta-p">Talk to Cliff Venable today. Free, confidential consultations available 24/7.</p>
+          <a href="contact.html" class="sidebar__cta-btn">Schedule Consultation</a>
+          <a href="tel:9197446471" class="sidebar__cta-phone">(919) 744-6471</a>
+        </div>
+
+        <div class="sidebar__nav-h">All Practice Areas</div>
+        <a href="violent-crimes.html" class="sidebar__link active">Violent Crimes <span class="sidebar__link-arrow">›</span></a>
+        <a href="drug-crimes.html" class="sidebar__link">Drug Crimes <span class="sidebar__link-arrow">›</span></a>
+        <a href="dui.html" class="sidebar__link">DUI Defense <span class="sidebar__link-arrow">›</span></a>
+        <a href="sex-crimes.html" class="sidebar__link">Sex Crimes <span class="sidebar__link-arrow">›</span></a>
+        <a href="theft-crimes.html" class="sidebar__link">Theft Crimes <span class="sidebar__link-arrow">›</span></a>
+        <a href="domestic-violence.html" class="sidebar__link">Domestic Violence <span class="sidebar__link-arrow">›</span></a>
+        <a href="white-collar-crimes.html" class="sidebar__link">White Collar Crimes <span class="sidebar__link-arrow">›</span></a>
+        <a href="expungements.html" class="sidebar__link">Expungements <span class="sidebar__link-arrow">›</span></a>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="wrap">
+    <div class="cta-strip__inner r">
+      <div>
+        <h2 class="cta-strip__h2">Your Case Deserves a <em>Fighter.</em></h2>
+        <p class="cta-strip__sub">A charge is not a conviction. Cliff Venable has spent over a decade fighting violent crime charges throughout Utah. Call now for a free, confidential consultation.</p>
+      </div>
+      <div class="cta-strip__btns">
+        <a href="tel:9197446471" class="btn-call">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.128.96.341 1.903.63 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.29 1.85.501 2.81.63A2 2 0 0122 14.92z"/></svg>
+          <span>(919) 744-6471</span>
+        </a>
+        <a href="contact.html" class="btn btn-accent"><span>Free Consultation</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="images/salt-city-defense-logo-white.png" alt="Salt City Defense" style="height:32px;width:auto;display:block;margin-bottom:14px;opacity:0.85;" />
+        <p class="footer__desc">Experienced criminal defense representation for individuals and families throughout Salt Lake City and Utah. Your freedom is worth fighting for.</p>
+      </div>
+      <div>
+        <div class="footer__col-h">Practice Areas</div>
+        <ul class="footer__links">
+          <li><a href="violent-crimes.html">Violent Crimes</a></li>
+          <li><a href="drug-crimes.html">Drug Crimes</a></li>
+          <li><a href="dui.html">DUI Defense</a></li>
+          <li><a href="sex-crimes.html">Sex Crimes</a></li>
+          <li><a href="domestic-violence.html">Domestic Violence</a></li>
+          <li><a href="expungements.html">Expungements</a></li>
+          <li><a href="theft-crimes.html">Theft Crimes</a></li>
+          <li><a href="white-collar-crimes.html">White Collar Crimes</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-h">Firm</div>
+        <ul class="footer__links">
+          <li><a href="about.html">About Cliff</a></li>
+          <li><a href="case-results.html">Case Results</a></li>
+          <li><a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="tel:9197446471">(919) 744-6471</a></li>
+        </ul>
+        <div style="margin-top:22px;">
+          <div class="footer__col-h">Location</div>
+          <p style="font-size:.8rem;color:var(--mid);line-height:1.7;">445 E 200 S #130<br>Salt Lake City, UT 84111</p>
+          <p style="font-size:.75rem;color:rgba(107,115,121,.55);margin-top:8px;letter-spacing:0.04em;">Available 24 / 7</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <p class="footer__copy">&copy; 2025 Salt City Defense. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <p class="footer__disc">The information on this website is for general informational purposes only and does not constitute legal advice. Contacting Salt City Defense does not create an attorney-client relationship.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mob-cta" role="complementary" aria-label="Quick contact">
+  <a href="tel:9197446471" class="mob-cta__call">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.128.96.341 1.903.63 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.29 1.85.501 2.81.63A2 2 0 0122 14.92z"/></svg>
+    Call Now
+  </a>
+  <a href="contact.html" class="mob-cta__form">Free Consultation</a>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 60), {passive:true});
+  const drawer = document.getElementById('drawer');
+  const ov = document.getElementById('ov');
+  const nb = document.getElementById('nb');
+  const dx = document.getElementById('dx');
+  const open  = () => { drawer.classList.add('open'); ov.classList.add('open'); nb.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; };
+  const close = () => { drawer.classList.remove('open'); ov.classList.remove('open'); nb.setAttribute('aria-expanded','false'); document.body.style.overflow=''; };
+  nb.addEventListener('click', open); dx.addEventListener('click', close); ov.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.r').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

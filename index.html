@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salt City Defense | Cliff Venable — Criminal Defense Attorney Salt Lake City, Utah</title>
+  <meta name="description" content="Cliff Venable is an experienced criminal defense attorney in Salt Lake City, Utah. Defending clients against criminal, DUI, drug, violent crime charges and more." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Salt City Defense | Cliff Venable — Criminal Defense Attorney Salt Lake City" />
+  <meta property="og:description" content="Experienced criminal defense representation in Salt Lake City and throughout Utah. Cliff Venable defends individuals facing criminal, DUI, drug, and violent crime charges. Free consultation. Available 24/7." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Salt City Defense" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Salt City Defense | Criminal Defense Attorney Salt Lake City, Utah" />
+  <meta name="twitter:description" content="Cliff Venable defends individuals facing criminal charges throughout Utah. Free & confidential consultation. Available 24/7." />
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Salt City Defense",
+    "description": "Criminal defense law firm serving Salt Lake City and all of Utah.",
+    "url": "https://saltcitydefense.com",
+    "telephone": "+19197446471",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 00:00-24:00",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Salt Lake City",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7608",
+      "longitude": "-111.8910"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Utah"
+    },
+    "employee": {
+      "@type": "Person",
+      "name": "Cliff Venable",
+      "jobTitle": "Criminal Defense Attorney",
+      "worksFor": { "@type": "LegalService", "name": "Salt City Defense" }
+    },
+    "knowsAbout": [
+      "Criminal Defense", "DUI Defense", "Drug Crimes", "Violent Crimes",
+      "Domestic Violence", "Sex Crimes", "Theft Crimes", "White Collar Crimes", "Expungements"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- NOTE: Replace Cormorant Garamond with GT Sectra or Freight Display when licensed -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --dark:    #1F1F1F;
+      --surface: #373B3E;
+      --light:   #F2F3F7;
+      --mid:     #6B7379;
+      --accent:  #C4800C;
+      --black:   #141414;
+      --font-d:  'Fraunces', Georgia, serif;
+      --font-b:  'Barlow', system-ui, sans-serif;
+      --ease:    cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark);
+      color: var(--light);
+      font-family: var(--font-b);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── LAYOUT ─── */
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    @media (min-width: 768px)  { .wrap { padding: 0 40px; } }
+    @media (min-width: 1200px) { .wrap { padding: 0 60px; } }
+
+    /* ─── NAVBAR ─── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 22px 0;
+      transition: background 300ms, padding 300ms, backdrop-filter 300ms;
+    }
+    .nav.stuck {
+      background: rgba(31,31,31,0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(242,243,247,0.06);
+    }
+    .nav__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav__logo { cursor: pointer; }
+    .nav__logo-img {
+      height: 26px; width: auto; display: block;
+    }
+    @media (min-width: 1024px) { .nav__logo-img { height: 36px; } }
+    .nav__links {
+      display: none;
+      gap: 32px;
+      list-style: none;
+    }
+    @media (min-width: 1024px) { .nav__links { display: flex; } }
+    .nav__links a {
+      font-size: 0.73rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(242,243,247,0.6);
+      font-weight: 500;
+      transition: color 180ms;
+      cursor: pointer;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav__links a::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 1px; background: var(--accent);
+      transform: scaleX(0); transform-origin: center;
+      transition: transform 280ms var(--ease);
+    }
+    .nav__links a:hover { color: var(--light); }
+    .nav__links a:hover::after { transform: scaleX(1); }
+    .nav__end { display: flex; align-items: center; gap: 16px; }
+    .nav__phone {
+      display: block;
+      font-size: 0.72rem;
+      color: rgba(242,243,247,0.55);
+      letter-spacing: 0.04em;
+      font-weight: 400;
+    }
+    @media (min-width: 1024px) { .nav__phone { font-size: 0.8rem; color: rgba(242,243,247,0.7); } }
+    .nav .btn-accent { display: none; }
+    @media (min-width: 1024px) { .nav .btn-accent { display: inline-flex; } }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-b); font-weight: 500;
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; border: none; transition: all 200ms;
+      white-space: nowrap; text-decoration: none;
+    }
+    .btn-accent {
+      background: rgba(196,128,12,0.08);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 12px 26px;
+      position: relative; overflow: hidden;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      letter-spacing: 0.05em;
+      transition: color 0ms 380ms, background 200ms, box-shadow 200ms;
+    }
+    .btn-accent::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--accent);
+      transform: translateX(-101%);
+      transition: transform 420ms var(--ease);
+      z-index: 0;
+    }
+    .btn-accent span, .btn-accent svg { position: relative; z-index: 1; }
+    .btn-accent:hover { color: var(--dark); transform: none; box-shadow: none; }
+    .btn-accent:hover::before { transform: translateX(0); }
+    /* Nav button — always solid, must read against hero photo */
+    .nav .btn-accent {
+      background: var(--accent);
+      color: var(--dark);
+      font-weight: 600;
+      transition: background 200ms, color 0ms;
+    }
+    .nav .btn-accent::before { display: none; }
+    .nav .btn-accent:hover { background: #b37210; color: var(--dark); }
+    .btn-outline {
+      background: rgba(242,243,247,0.04);
+      color: var(--light);
+      border: 1px solid rgba(242,243,247,0.2);
+      padding: 12px 26px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      letter-spacing: 0.05em;
+    }
+    .btn-outline:hover {
+      border-color: rgba(242,243,247,0.45);
+      background: rgba(242,243,247,0.08);
+    }
+    .btn-lg { padding: 16px 34px; font-size: 0.76rem; }
+
+    /* hamburger */
+    .nav__burger {
+      display: flex; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    @media (min-width: 1024px) { .nav__burger { display: none; } }
+    .nav__burger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--light); transition: all 240ms;
+    }
+
+    /* ─── DRAWER ─── */
+    .drawer {
+      position: fixed; top: 0; right: 0;
+      width: 280px; height: 100%;
+      background: #1a1a1a;
+      border-left: 1px solid rgba(242,243,247,0.07);
+      z-index: 200;
+      transform: translateX(100%);
+      transition: transform 340ms var(--ease);
+      padding: 80px 32px 40px;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer a {
+      font-size: 1rem; color: rgba(242,243,247,0.75);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(242,243,247,0.05);
+      transition: color 180ms;
+    }
+    .drawer a:hover { color: var(--accent); }
+    .drawer__x {
+      position: absolute; top: 22px; right: 24px;
+      cursor: pointer; color: var(--mid);
+      font-size: 1.5rem; line-height: 1;
+      background: none; border: none; color: var(--mid);
+    }
+    .overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 150;
+      opacity: 0; pointer-events: none;
+      transition: opacity 340ms;
+    }
+    .overlay.open { opacity: 1; pointer-events: all; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100svh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      position: relative; overflow: hidden;
+      padding-bottom: 80px;
+    }
+    .hero__bg {
+      position: absolute; inset: 0;
+      background: var(--dark);
+    }
+    .hero__bg-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    .hero__bg::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 1;
+      background:
+        linear-gradient(to bottom, transparent 0%, rgba(31,31,31,0.15) 25%, rgba(31,31,31,0.72) 60%, rgba(31,31,31,0.92) 100%),
+        linear-gradient(to right, rgba(31,31,31,0.75) 30%, rgba(31,31,31,0.1) 80%, transparent 100%);
+    }
+    .hero__rule { display: none; }
+    .hero__content { position: relative; z-index: 2; max-width: 860px; }
+
+    .hero__eye {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.25s both;
+    }
+    .hero__eye-line { width: 36px; height: 1px; background: var(--accent); }
+    .hero__eye-text {
+      font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500;
+    }
+    .hero__h1 {
+      font-family: var(--font-d);
+      font-size: clamp(3.4rem, 8.5vw, 8rem);
+      font-weight: 500; line-height: 1.01; letter-spacing: -0.01em;
+      color: var(--light); margin-bottom: 28px;
+      animation: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.45s both;
+    }
+    .hero__h1 em { font-style: italic; color: var(--accent); }
+    .hero__sub {
+      font-size: clamp(0.95rem, 1.8vw, 1.08rem);
+      color: rgba(242,243,247,0.58); max-width: 500px;
+      line-height: 1.72; font-weight: 300; margin-bottom: 44px;
+      animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.68s both;
+    }
+    .hero__btns {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.88s both;
+    }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+    .hero__scroll {
+      position: absolute; bottom: 28px; right: 0;
+      display: flex; align-items: center; gap: 10px;
+      z-index: 2;
+      animation: fadeIn 0.6s ease 1.3s both;
+    }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    .hero__scroll-bar {
+      width: 1px; height: 44px;
+      background: linear-gradient(to bottom, var(--mid), transparent);
+      animation: bar 2s ease-in-out infinite;
+    }
+    .hero__scroll-text {
+      font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--mid); writing-mode: vertical-rl;
+    }
+    @keyframes bar { 0%,100%{opacity:.4} 50%{opacity:1} }
+
+    /* ─── SECTION SHARED ─── */
+    .sec { padding: 100px 0; }
+    @media (min-width: 768px) { .sec { padding: 120px 0; } }
+    .sec-label {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .sec-label__bar { width: 30px; height: 1px; background: var(--accent); }
+    .sec-label__txt {
+      font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500;
+    }
+    .sec-title {
+      font-family: var(--font-d);
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 500; line-height: 1.07; letter-spacing: -0.01em;
+      color: var(--light);
+    }
+    .sec-title em { font-style: italic; color: rgba(242,243,247,0.42); }
+
+    /* ─── TRUST BAR ─── */
+    .trust {
+      padding: 0;
+      background: var(--surface);
+      border-top: 1px solid rgba(242,243,247,0.1);
+      border-bottom: 1px solid rgba(242,243,247,0.1);
+      overflow: hidden;
+    }
+    .trust__row {
+      display: flex;
+      align-items: stretch;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .trust__row::-webkit-scrollbar { display: none; }
+    @media (min-width: 900px) { .trust__row { overflow-x: visible; } }
+    .trust__item {
+      flex: 1 0 auto;
+      display: flex; flex-direction: column; gap: 5px;
+      padding: 22px 32px;
+      border-right: 1px solid rgba(242,243,247,0.08);
+      position: relative;
+      transition: background 240ms;
+    }
+    .trust__item:last-child { border-right: none; }
+    .trust__item::before {
+      content: '';
+      position: absolute; left: 0; top: 28%; bottom: 28%;
+      width: 2px; background: var(--accent);
+      transform: scaleY(0); transform-origin: bottom;
+      transition: transform 320ms var(--ease);
+    }
+    .trust__item:hover { background: rgba(242,243,247,0.03); }
+    .trust__item:hover::before { transform: scaleY(1); }
+    .trust__eye {
+      font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600;
+    }
+    .trust__val {
+      font-family: var(--font-d);
+      font-size: 1.05rem; font-weight: 500;
+      color: var(--light); letter-spacing: 0.01em;
+      line-height: 1.2; white-space: nowrap;
+    }
+
+    /* ─── PRACTICE AREAS ─── */
+    .practice { background: var(--dark); }
+    .practice__head {
+      display: flex; flex-direction: column; gap: 24px;
+      margin-bottom: 52px;
+    }
+    @media (min-width: 768px) {
+      .practice__head { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    }
+    .practice__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: rgba(242,243,247,0.06);
+    }
+    @media (min-width: 560px)  { .practice__grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .practice__grid { grid-template-columns: repeat(5, 1fr); } }
+    .pa {
+      background: var(--dark);
+      padding: 34px 26px;
+      display: flex; flex-direction: column; gap: 14px;
+      position: relative; overflow: hidden;
+      cursor: pointer; transition: background 240ms;
+      text-decoration: none;
+    }
+    .pa::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 280ms var(--ease);
+    }
+    .pa:hover { background: var(--surface); }
+    .pa:hover::after { transform: scaleX(1); }
+    .pa__n {
+      font-family: var(--font-d);
+      font-size: 0.7rem; color: var(--accent);
+      letter-spacing: 0.1em; font-weight: 500;
+      transition: transform 260ms var(--ease), letter-spacing 260ms var(--ease);
+      display: inline-block;
+    }
+    .pa:hover .pa__n { transform: translateY(-3px); letter-spacing: 0.2em; }
+    .pa__title {
+      font-family: var(--font-d);
+      font-size: 1.22rem; font-weight: 500;
+      color: var(--light); line-height: 1.2;
+      transition: letter-spacing 260ms var(--ease);
+    }
+    .pa:hover .pa__title { letter-spacing: 0.01em; }
+    .pa__arr {
+      margin-top: auto;
+      width: 15px; height: 15px; color: var(--mid);
+      transition: color 200ms, transform 200ms;
+    }
+    .pa:hover .pa__arr { color: var(--accent); transform: translate(4px,-4px); }
+
+    /* ─── ABOUT ─── */
+    .about { background: var(--surface); }
+    .about__grid {
+      display: grid; grid-template-columns: 1fr; gap: 60px;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .about__grid { grid-template-columns: 1fr 1fr; gap: 80px; }
+    }
+    .about__img-wrap {
+      position: relative;
+      aspect-ratio: 4/5;
+    }
+    .about__img-ph {
+      width: 100%; height: 100%;
+      background: linear-gradient(140deg, #2c2c2c, #1a1a1a);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--mid); font-size: 0.72rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .about__corner {
+      display: none;
+      position: absolute; top: -14px; right: -14px;
+      width: 100px; height: 100px;
+      border: 1px solid var(--accent);
+      pointer-events: none;
+    }
+    @media (min-width: 1024px) { .about__corner { display: block; } }
+    .about__badge {
+      position: absolute; bottom: 24px; left: -20px;
+      background: var(--accent); color: var(--dark);
+      padding: 14px 18px;
+    }
+    .about__badge-name {
+      font-family: var(--font-d);
+      font-size: 1.3rem; font-weight: 600; line-height: 1;
+    }
+    .about__badge-role {
+      font-size: 0.58rem; letter-spacing: 0.18em;
+      text-transform: uppercase; font-weight: 500; margin-top: 4px;
+    }
+    .about__col { display: flex; flex-direction: column; gap: 26px; }
+    .about__body {
+      font-size: 1.02rem; color: rgba(242,243,247,0.68);
+      line-height: 1.76; font-weight: 300;
+    }
+    .about__body strong { color: var(--light); font-weight: 500; }
+    .about__creds {
+      border-left: 2px solid var(--accent);
+      padding-left: 18px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .about__cred {
+      font-size: 0.8rem; color: rgba(242,243,247,0.58);
+    }
+    .about__cred strong { color: var(--light); }
+
+    /* ─── STATS ─── */
+    .stats { background: var(--dark); }
+    .stats__grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: rgba(242,243,247,0.06);
+      margin-top: 56px;
+    }
+    @media (min-width: 768px) { .stats__grid { grid-template-columns: repeat(4,1fr); } }
+    .stat {
+      background: var(--dark);
+      padding: 50px 30px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .stat__n {
+      font-family: var(--font-d);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 500; line-height: 1; letter-spacing: -0.02em;
+      color: var(--light);
+    }
+    .stat__n span { color: var(--accent); }
+    .stat__label {
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--mid); font-weight: 500;
+    }
+    .stat__note {
+      font-size: 0.76rem; color: rgba(242,243,247,0.32);
+      line-height: 1.5; margin-top: 2px;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testi { background: var(--surface); }
+    .testi__grid {
+      display: grid; grid-template-columns: 1fr; gap: 18px;
+      margin-top: 52px;
+    }
+    @media (min-width: 768px) { .testi__grid { grid-template-columns: repeat(3,1fr); } }
+    .tcard {
+      background: rgba(31,31,31,0.6);
+      border: 1px solid rgba(242,243,247,0.06);
+      padding: 34px 26px;
+      display: flex; flex-direction: column; gap: 18px;
+      transition: border-color 240ms;
+      position: relative;
+    }
+    .tcard::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 420ms var(--ease);
+    }
+    .tcard:hover::before { transform: scaleX(1); }
+    .tcard:hover { border-color: rgba(247,148,29,0.28); }
+    .tcard__q {
+      font-family: var(--font-d);
+      font-size: 3.2rem; color: var(--accent);
+      line-height: 0.75; font-style: italic;
+    }
+    .tcard__body {
+      font-family: var(--font-d);
+      font-size: 1.05rem; font-weight: 400;
+      color: rgba(242,243,247,0.72);
+      line-height: 1.68; font-style: italic;
+    }
+    .tcard__foot {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid rgba(242,243,247,0.06);
+    }
+    .stars { display: flex; gap: 3px; margin-bottom: 8px; }
+    .stars svg { width: 11px; height: 11px; fill: var(--accent); }
+    .tcard__name {
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--light); letter-spacing: 0.04em;
+    }
+    .tcard__case {
+      font-size: 0.68rem; color: var(--accent);
+      margin-top: 3px; letter-spacing: 0.06em;
+    }
+
+    /* ─── CTA ─── */
+    .cta { background: var(--dark); padding: 100px 0; position: relative; overflow: hidden; }
+    .cta__bg {
+      position: absolute; inset: 0;
+      background-image: url('images/banner-courtroom-session.png');
+      background-size: cover;
+      background-position: center 35%;
+      opacity: 0.22;
+    }
+    .cta::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
+      z-index: 1;
+    }
+    .cta::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+      background: linear-gradient(to bottom, transparent, var(--black));
+      z-index: 1;
+      pointer-events: none;
+    }
+    .cta .wrap { position: relative; z-index: 2; }
+    .cta__grid {
+      display: grid; grid-template-columns: 1fr; gap: 48px;
+      align-items: center;
+    }
+    @media (min-width: 1024px) { .cta__grid { grid-template-columns: 1fr auto; } }
+    .cta__h {
+      font-family: var(--font-d);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500; line-height: 1.1; letter-spacing: -0.01em;
+      color: var(--light);
+    }
+    .cta__h em { font-style: italic; color: var(--accent); }
+    .cta__sub {
+      margin-top: 14px;
+      font-size: 0.94rem; color: rgba(242,243,247,0.72); line-height: 1.65;
+    }
+    .cta__btns {
+      display: flex; flex-direction: column; gap: 12px;
+      min-width: 230px;
+    }
+    .btn-call {
+      background: rgba(196,128,12,0.08); color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 17px 26px;
+      font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      cursor: pointer; transition: color 0ms 380ms, border-color 200ms;
+      text-decoration: none; position: relative; overflow: hidden;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+    .btn-call::before {
+      content: ''; position: absolute; inset: 0;
+      background: var(--accent);
+      transform: translateX(-101%);
+      transition: transform 420ms var(--ease); z-index: 0;
+    }
+    .btn-call:hover { color: var(--dark); transform: none; box-shadow: none; }
+    .btn-call:hover::before { transform: translateX(0); }
+    .btn-call > * { position: relative; z-index: 1; }
+    .btn-consult {
+      background: rgba(242,243,247,0.04); color: var(--light);
+      border: 1px solid rgba(242,243,247,0.18);
+      padding: 15px 26px;
+      font-family: var(--font-b); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      cursor: pointer; transition: all 200ms; text-decoration: none;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+    .btn-consult:hover {
+      border-color: rgba(242,243,247,0.45);
+      background: rgba(242,243,247,0.08);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(242,243,247,0.05);
+      padding: 60px 0 36px;
+    }
+    .footer__grid {
+      display: grid; grid-template-columns: 1fr; gap: 44px;
+      margin-bottom: 48px;
+    }
+    @media (min-width: 768px) {
+      .footer__grid { grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; }
+    }
+    .footer__name {
+      font-family: var(--font-d);
+      font-size: 1.35rem; font-weight: 600; color: var(--light);
+    }
+    .footer__sub {
+      font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin: 4px 0 14px;
+    }
+    .footer__desc {
+      font-size: 0.8rem; color: var(--mid);
+      line-height: 1.65; max-width: 270px;
+    }
+    .footer__col-h {
+      font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(242,243,247,0.35); font-weight: 500; margin-bottom: 14px;
+    }
+    .footer__links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer__links a {
+      font-size: 0.82rem; color: var(--mid); transition: color 180ms;
+    }
+    .footer__links a:hover { color: var(--light); }
+    .footer__bot {
+      padding-top: 28px;
+      border-top: 1px solid rgba(242,243,247,0.05);
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    @media (min-width: 768px) {
+      .footer__bot { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+    }
+    .footer__copy { font-size: 0.7rem; color: rgba(107,115,121,0.55); }
+    .footer__disc {
+      font-size: 0.63rem; color: rgba(107,115,121,0.38);
+      max-width: 460px; line-height: 1.55;
+    }
+
+    /* ─── MOBILE STICKY CTA ─── */
+    .mob-cta {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 50; display: flex;
+    }
+    @media (min-width: 768px) { .mob-cta { display: none; } }
+    .mob-cta a {
+      flex: 1; padding: 15px;
+      text-align: center; font-family: var(--font-b);
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .mob-cta__call { background: var(--accent); color: var(--dark); }
+    .mob-cta__form { background: var(--surface); color: var(--light); }
+
+    /* ─── PRACTICE CARDS — MOBILE ROW LAYOUT ─── */
+    @media (max-width: 559px) {
+      .pa {
+        flex-direction: row;
+        align-items: center;
+        padding: 22px 20px;
+        gap: 16px;
+        min-height: 0;
+      }
+      .pa__n {
+        font-size: 2rem;
+        min-width: 48px;
+        color: rgba(247,148,29,0.28);
+        letter-spacing: 0.04em;
+        line-height: 1;
+        transition: none;
+      }
+      .pa:hover .pa__n {
+        transform: none;
+        letter-spacing: 0.04em;
+        color: var(--accent);
+      }
+      .pa__title {
+        flex: 1;
+        font-size: 1.12rem;
+        transition: none;
+      }
+      .pa:hover .pa__title { letter-spacing: 0; }
+      .pa__arr {
+        margin-top: 0;
+        width: 16px; height: 16px;
+        flex-shrink: 0;
+      }
+    }
+
+    /* ─── ABOUT CORNER DRAW ─── */
+    .about__corner {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      transition: clip-path 600ms var(--ease) 400ms;
+    }
+    .about__img-wrap.on .about__corner {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* ─── SECTION LABEL BAR DRAW ─── */
+    .sec-label__bar {
+      width: 0;
+      transition: width 500ms var(--ease) 200ms;
+    }
+    .sec-label.on .sec-label__bar { width: 30px; }
+
+    /* ─── STATS SPRING ENTRANCE ─── */
+    .stat.r { transform: translateY(30px) scale(0.96); }
+    .stat.r.on {
+      transform: translateY(0) scale(1);
+      transition: opacity 600ms var(--ease), transform 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* ─── BTN-CALL SWEEP ─── */
+    .btn-call {
+      position: relative; overflow: hidden;
+    }
+    .btn-call::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,0.14);
+      transform: translateX(-110%) skewX(-20deg);
+      transition: transform 480ms var(--ease);
+    }
+    .btn-call:hover::before { transform: translateX(110%) skewX(-20deg); }
+
+    /* ─── SCROLL REVEAL ─── */
+    .r {
+      opacity: 0; transform: translateY(26px);
+      transition: opacity 680ms var(--ease), transform 680ms var(--ease);
+    }
+    .r.on { opacity: 1; transform: none; }
+    .r.d1 { transition-delay: 100ms; }
+    .r.d2 { transition-delay: 200ms; }
+    .r.d3 { transition-delay: 300ms; }
+    .r.d4 { transition-delay: 400ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      .r { opacity: 1; transform: none; }
+      .sec-label__bar { width: 30px; }
+      .about__corner { clip-path: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- OVERLAY -->
+<div class="overlay" id="ov"></div>
+
+<!-- DRAWER -->
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <button class="drawer__x" id="dx" aria-label="Close menu">&times;</button>
+  <a href="#practice">Practice Areas</a>
+  <a href="#about">About Cliff</a>
+  <a href="#results">Case Results</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="blog.html">Blog</a>
+  <a href="#contact" style="color:var(--accent);margin-top:8px;">Free Consultation</a>
+  <a href="tel:9197446471" style="color:var(--mid);font-size:.82rem;margin-top:4px;">(919) 744-6471</a>
+</nav>
+
+<!-- NAV -->
+<header class="nav" id="nav" role="banner">
+  <div class="wrap">
+    <div class="nav__row">
+      <a class="nav__logo" href="/" aria-label="Salt City Defense home">
+        <img class="nav__logo-img" src="images/salt-city-defense-logo-white.png" alt="Salt City Defense" />
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#testimonials">Testimonials</a>
+  <a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav__end">
+        <a class="nav__phone" href="tel:9197446471">(919) 744-6471</a>
+        <a class="btn btn-accent" href="#contact">Free Consultation</a>
+        <button class="nav__burger" id="nb" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero__bg">
+    <picture>
+      <source media="(max-width: 767px)" srcset="images/banner-hero-mobile.png" />
+      <img class="hero__bg-img" src="images/banner-hero.png" alt="" aria-hidden="true" />
+    </picture>
+  </div>
+  <div class="hero__rule" id="hr"></div>
+  <div class="wrap">
+    <div class="hero__content">
+      <div class="hero__eye" id="he">
+        <div class="hero__eye-line"></div>
+        <span class="hero__eye-text">Salt Lake City Criminal Defense Attorney</span>
+      </div>
+      <h1 class="hero__h1" id="hh">
+        Defense Starts<br>With <em>Experience.</em>
+      </h1>
+      <p class="hero__sub" id="hs">
+        Providing seasoned, client-focused defense to protect your future and your freedom. Cliff Venable fights for individuals facing serious criminal charges throughout Utah.
+      </p>
+      <div class="hero__btns" id="hb">
+        <a href="tel:9197446471" class="btn btn-accent btn-lg">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.128.96.341 1.903.63 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.29 1.85.501 2.81.63A2 2 0 0122 14.92z"/></svg></span>
+          <span>Call Now</span>
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">Free Consultation</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll" id="hsc">
+    <div class="hero__scroll-bar"></div>
+    <span class="hero__scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust__row">
+      <div class="trust__item">
+        <span class="trust__eye">Licensed</span>
+        <span class="trust__val">Utah State Bar</span>
+      </div>
+      <div class="trust__item">
+        <span class="trust__eye">Available</span>
+        <span class="trust__val">24 / 7</span>
+      </div>
+      <div class="trust__item">
+        <span class="trust__eye">Practice</span>
+        <span class="trust__val">100% Criminal Defense</span>
+      </div>
+      <div class="trust__item">
+        <span class="trust__eye">Consultation</span>
+        <span class="trust__val">Free &amp; Confidential</span>
+      </div>
+      <div class="trust__item">
+        <span class="trust__eye">Coverage</span>
+        <span class="trust__val">All of Utah</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WASATCH MOUNTAINS PHOTO DIVIDER -->
+<div style="position:relative;overflow:hidden;line-height:0;height:340px;" aria-hidden="true">
+  <img src="images/banner-wasatch-mtn.png?v=2" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;" />
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 55%, rgba(31,31,31,0.3) 72%, rgba(31,31,31,0.65) 84%, var(--dark) 100%);"></div>
+</div>
+
+<!-- PRACTICE AREAS -->
+<section class="sec practice" id="practice" aria-labelledby="prac-title">
+  <div class="wrap">
+    <div class="practice__head">
+      <div>
+        <div class="sec-label r"><div class="sec-label__bar"></div><span class="sec-label__txt">What We Defend</span></div>
+        <h2 class="sec-title r d1" id="prac-title">Practice <em>Areas</em></h2>
+      </div>
+      <a href="/practice-areas" class="btn btn-outline r d2">View All Areas</a>
+    </div>
+  </div>
+  <!-- full-bleed grid -->
+  <div style="max-width:1440px;margin:0 auto;padding:0;">
+    <div class="practice__grid r d1">
+      <a class="pa" href="/criminal-defense">
+        <span class="pa__n">01</span>
+        <h3 class="pa__title">Criminal Defense</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/violent-crimes">
+        <span class="pa__n">02</span>
+        <h3 class="pa__title">Violent Crimes</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/drug-crimes">
+        <span class="pa__n">03</span>
+        <h3 class="pa__title">Drug Crimes</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/theft-crimes">
+        <span class="pa__n">04</span>
+        <h3 class="pa__title">Theft Crimes</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/sex-crimes">
+        <span class="pa__n">05</span>
+        <h3 class="pa__title">Sex Crimes</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/domestic-violence">
+        <span class="pa__n">06</span>
+        <h3 class="pa__title">Domestic Violence</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/dui-defense">
+        <span class="pa__n">07</span>
+        <h3 class="pa__title">DUI Defense</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/white-collar">
+        <span class="pa__n">08</span>
+        <h3 class="pa__title">White Collar Crimes</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/expungements">
+        <span class="pa__n">09</span>
+        <h3 class="pa__title">Expungements</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+      <a class="pa" href="/marijuana-possession">
+        <span class="pa__n">10</span>
+        <h3 class="pa__title">Marijuana Possession</h3>
+        <svg class="pa__arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about__grid">
+      <div class="about__img-wrap r">
+        <img src="images/cliff-headshot.jpg" alt="Cliff Venable, Salt City Defense Attorney" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+        <div class="about__corner" aria-hidden="true"></div>
+        <div class="about__badge">
+          <div class="about__badge-name">Cliff Venable</div>
+          <div class="about__badge-role">Criminal Defense Attorney</div>
+        </div>
+      </div>
+      <div class="about__col">
+        <div class="sec-label r"><div class="sec-label__bar"></div><span class="sec-label__txt">About Cliff</span></div>
+        <h2 class="sec-title r d1" id="about-title">I've Handled<br><em>Worse Than This.</em></h2>
+        <p class="about__body r d2">
+          When you're facing criminal charges, you need an attorney who has been in the room — who has argued in front of judges, cross-examined witnesses, and negotiated with prosecutors. <strong>Cliff Venable brings that experience to every client.</strong>
+        </p>
+        <p class="about__body r d2">
+          Based in Salt Lake City and serving clients across Utah, Cliff has built a reputation for thorough case preparation, honest counsel, and relentless advocacy. Whether you're facing a first-time misdemeanor or a serious felony, you deserve a defense built on real experience — not promises.
+        </p>
+        <div class="about__creds r d3">
+          <div class="about__cred"><strong>Licensed</strong> — Utah State Bar</div>
+          <div class="about__cred"><strong>Serving</strong> — Salt Lake City &amp; All of Utah</div>
+          <div class="about__cred"><strong>Focus</strong> — Exclusively Criminal Defense</div>
+          <div class="about__cred"><strong>Available</strong> — 24/7 for urgent matters</div>
+        </div>
+        <div class="r d4">
+          <a href="about.html" class="btn btn-outline">Full Biography</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="sec stats" id="results" aria-labelledby="stats-title">
+  <div class="wrap">
+    <div class="sec-label r"><div class="sec-label__bar"></div><span class="sec-label__txt">Track Record</span></div>
+    <h2 class="sec-title r d1" id="stats-title">Results That<br><em>Speak for Themselves.</em></h2>
+    <div class="stats__grid">
+      <div class="stat r">
+        <div class="stat__n">2,000<span style="color:var(--accent)">+</span></div>
+        <div class="stat__label">Cases Defended</div>
+        <div class="stat__note">Representing individuals across all areas of Utah criminal law</div>
+      </div>
+      <div class="stat r d1">
+        <div class="stat__n">16<span style="color:var(--accent)">+</span></div>
+        <div class="stat__label">Years of Experience</div>
+        <div class="stat__note">Dedicated exclusively to criminal defense in Utah courts</div>
+      </div>
+      <div class="stat r d2">
+        <div class="stat__n">100<span style="color:var(--accent)">%</span></div>
+        <div class="stat__label">Criminal Defense Focus</div>
+        <div class="stat__note">Not a general practice — every case we take is criminal defense</div>
+      </div>
+      <div class="stat r d3">
+        <div class="stat__n">24<span style="color:var(--accent)">/</span>7</div>
+        <div class="stat__label">Availability</div>
+        <div class="stat__note">Arrests don't happen on a schedule. Neither does our response.</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:52px;" class="r d1">
+      <a href="/case-results" class="btn btn-outline">View Case Results</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec testi" id="testimonials" aria-labelledby="testi-title">
+  <div class="wrap">
+    <div class="sec-label r"><div class="sec-label__bar"></div><span class="sec-label__txt">Client Testimonials</span></div>
+    <h2 class="sec-title r d1" id="testi-title">What Clients<br><em>Are Saying.</em></h2>
+    <div class="testi__grid">
+      <div class="tcard r">
+        <div class="tcard__q" aria-hidden="true">"</div>
+        <p class="tcard__body">Cliff was straightforward from day one. He didn't sugarcoat anything, but he also never stopped fighting. My charges were reduced significantly. I can't recommend him enough.</p>
+        <div class="tcard__foot">
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <div class="tcard__name">Michael T.</div>
+          <div class="tcard__case">Drug Possession — Charges Reduced</div>
+        </div>
+      </div>
+      <div class="tcard r d1">
+        <div class="tcard__q" aria-hidden="true">"</div>
+        <p class="tcard__body">When I was arrested for DUI, I was terrified. Cliff walked me through every step, communicated clearly, and got my case dismissed. He treated me like a person, not just a case number.</p>
+        <div class="tcard__foot">
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <div class="tcard__name">Sarah K.</div>
+          <div class="tcard__case">DUI Defense — Case Dismissed</div>
+        </div>
+      </div>
+      <div class="tcard r d2">
+        <div class="tcard__q" aria-hidden="true">"</div>
+        <p class="tcard__body">I hired Cliff after being charged with assault. He was calm, professional, and incredibly prepared every time we went to court. The outcome exceeded my expectations.</p>
+        <div class="tcard__foot">
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <div class="tcard__name">David R.</div>
+          <div class="tcard__case">Violent Crime — Favorable Outcome</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px;" class="r d1">
+      <a href="/testimonials" class="btn btn-outline">Read More Testimonials</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact" aria-labelledby="cta-title">
+  <div class="cta__bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="cta__grid">
+      <div class="r">
+        <div class="sec-label r"><div class="sec-label__bar"></div><span class="sec-label__txt">Get Help Now</span></div>
+        <h2 class="cta__h" id="cta-title">Your Defense<br>Starts <em>Today.</em></h2>
+        <p class="cta__sub">Don't wait. The sooner you have experienced representation, the stronger your defense. Contact Cliff Venable for a free, confidential consultation.</p>
+      </div>
+      <div class="cta__btns r d2">
+        <a href="tel:9197446471" class="btn-call">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.128.96.341 1.903.63 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.29 1.85.501 2.81.63A2 2 0 0122 14.92z"/></svg>
+          (919) 744-6471
+        </a>
+        <a href="/contact" class="btn-consult">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          Free Consultation Form
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="images/salt-city-defense-logo-white.png" alt="Salt City Defense" style="height:32px;width:auto;display:block;margin-bottom:14px;opacity:0.85;" />
+        <p class="footer__desc">Experienced criminal defense representation for individuals and families throughout Salt Lake City and Utah. Your freedom is worth fighting for.</p>
+      </div>
+      <div>
+        <div class="footer__col-h">Practice Areas</div>
+        <ul class="footer__links">
+          <li><a href="/criminal-defense">Criminal Defense</a></li>
+          <li><a href="/dui-defense">DUI Defense</a></li>
+          <li><a href="/drug-crimes">Drug Crimes</a></li>
+          <li><a href="/violent-crimes">Violent Crimes</a></li>
+          <li><a href="/domestic-violence">Domestic Violence</a></li>
+          <li><a href="/expungements">Expungements</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-h">Firm</div>
+        <ul class="footer__links">
+          <li><a href="about.html">About Cliff</a></li>
+          <li><a href="/case-results">Case Results</a></li>
+          <li><a href="/testimonials">Testimonials</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="tel:9197446471">(919) 744-6471</a></li>
+        </ul>
+        <div style="margin-top:22px;">
+          <div class="footer__col-h">Location</div>
+          <p style="font-size:.8rem;color:var(--mid);line-height:1.7;">445 E 200 S #130<br>Salt Lake City, UT 84111</p>
+          <p style="font-size:.75rem;color:rgba(107,115,121,.55);margin-top:8px;letter-spacing:0.04em;">Available 24 / 7</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <p class="footer__copy">&copy; 2025 Salt City Defense. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <p class="footer__disc">The information on this website is for general informational purposes only and does not constitute legal advice. Contacting Salt City Defense does not create an attorney-client relationship.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mob-cta" role="navigation" aria-label="Quick contact">
+  <a href="tel:9197446471" class="mob-cta__call">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.128.96.341 1.903.63 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.29 1.85.501 2.81.63A2 2 0 0122 14.92z"/></svg>
+    Call Now
+  </a>
+  <a href="/contact" class="mob-cta__form">Free Consultation</a>
+</div>
+
+<script>
+  // NAV SCROLL
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 60), {passive:true});
+
+  // MOBILE DRAWER
+  const drawer = document.getElementById('drawer');
+  const ov = document.getElementById('ov');
+  const nb = document.getElementById('nb');
+  const dx = document.getElementById('dx');
+  const open  = () => { drawer.classList.add('open'); ov.classList.add('open'); nb.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; };
+  const close = () => { drawer.classList.remove('open'); ov.classList.remove('open'); nb.setAttribute('aria-expanded','false'); document.body.style.overflow=''; };
+  nb.addEventListener('click', open);
+  dx.addEventListener('click', close);
+  ov.addEventListener('click', close);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+
+  // SCROLL REVEAL
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }});
+  }, {threshold: 0.1, rootMargin:'0px 0px -36px 0px'});
+  document.querySelectorAll('.r').forEach(el => io.observe(el));
+
+  // COUNTER ANIMATION
+  const ci = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(!e.isIntersecting || e.target.dataset.done) return;
+      e.target.dataset.done = '1';
+      const target = parseInt(e.target.dataset.target);
+      const suffix = e.target.dataset.suffix || '';
+      if(rm){ e.target.textContent = target + suffix; return; }
+      const dur = 1600, t0 = performance.now();
+      const tick = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        const eased = 1 - Math.pow(2, -10 * p);
+        e.target.textContent = Math.round(eased * target) + suffix;
+        if(p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      ci.unobserve(e.target);
+    });
+  }, {threshold: 0.5});
+  document.querySelectorAll('[data-target]').forEach(el => ci.observe(el));
+</script>
+</body>
+</html>

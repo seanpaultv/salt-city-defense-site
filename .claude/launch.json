@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "salt-city-defense",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "--listen", "5555", "/Users/srademacher/Desktop/Jobs/z. mines/salt city defense/site/claude code"],
+      "port": 5555
+    }
+  ]
+}

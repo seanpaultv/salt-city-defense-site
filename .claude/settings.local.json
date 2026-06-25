@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(ls ~/.claude/skills/ 2>/dev/null || echo \"no skills dir\")",
+      "Bash(mkdir -p ~/.claude/skills/frontend-design)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm install *)",
+      "Read(//usr/local/bin/**)",
+      "Bash(command -v npm)",
+      "Read(//Users/srademacher/.nvm/versions/**)",
+      "Bash(find /usr/local /opt/homebrew ~/.volta ~/.fnm /opt /usr/bin -name \"npm\" 2>/dev/null | head -5)",
+      "Bash(brew install *)"
+    ]
+  }
+}
