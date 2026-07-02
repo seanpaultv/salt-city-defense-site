@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Salt City Defense</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Salt City Defense — criminal defense attorney in Salt Lake City, Utah." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CX7SFDXP85"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CX7SFDXP85');
+  </script>
+
+  <style>
+    :root {
+      --dark:    #1F1F1F;
+      --surface: #373B3E;
+      --light:   #F2F3F7;
+      --mid:     #6B7379;
+      --accent:  #C4800C;
+      --black:   #141414;
+      --font-d:  'Fraunces', Georgia, serif;
+      --font-b:  'Barlow', system-ui, sans-serif;
+      --ease:    cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark);
+      color: var(--light);
+      font-family: var(--font-b);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    @media (min-width: 768px)  { .wrap { padding: 0 40px; } }
+    @media (min-width: 1200px) { .wrap { padding: 0 60px; } }
+
+    /* ─── NAVBAR ─── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 22px 0;
+      transition: background 300ms, padding 300ms, backdrop-filter 300ms;
+      background: rgba(31,31,31,0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(242,243,247,0.06);
+    }
+    .nav__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav__logo { cursor: pointer; }
+    .nav__logo-img { height: 26px; width: auto; display: block; }
+    @media (min-width: 1024px) { .nav__logo-img { height: 36px; } }
+    .nav__links {
+      display: none;
+      gap: 32px;
+      list-style: none;
+    }
+    @media (min-width: 1024px) { .nav__links { display: flex; } }
+    .nav__links a {
+      font-size: 0.73rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(242,243,247,0.6);
+      font-weight: 500;
+      transition: color 180ms;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav__links a::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 1px; background: var(--accent);
+      transform: scaleX(0); transform-origin: center;
+      transition: transform 280ms var(--ease);
+    }
+    .nav__links a:hover { color: var(--light); }
+    .nav__links a:hover::after { transform: scaleX(1); }
+    .nav__end { display: flex; align-items: center; gap: 16px; }
+    .nav__phone {
+      display: block;
+      font-size: 0.72rem;
+      color: rgba(242,243,247,0.55);
+      letter-spacing: 0.04em;
+      font-weight: 400;
+    }
+    @media (min-width: 1024px) { .nav__phone { font-size: 0.8rem; color: rgba(242,243,247,0.7); } }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-b); font-weight: 500;
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; border: none; transition: all 200ms;
+      white-space: nowrap; text-decoration: none;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: var(--dark);
+      font-weight: 600;
+      padding: 12px 26px;
+      letter-spacing: 0.05em;
+      transition: background 200ms;
+    }
+    .btn-accent:hover { background: #b37210; color: var(--dark); }
+    .btn-accent.outline {
+      background: rgba(196,128,12,0.08);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      font-weight: 500;
+      position: relative; overflow: hidden;
+    }
+    .btn-accent.outline::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--accent);
+      transform: translateX(-101%);
+      transition: transform 420ms var(--ease);
+      z-index: 0;
+    }
+    .btn-accent.outline span { position: relative; z-index: 1; }
+    .btn-accent.outline:hover { color: var(--dark); }
+    .btn-accent.outline:hover::before { transform: translateX(0); }
+    .btn-lg { padding: 16px 34px; font-size: 0.76rem; }
+    .nav .btn-accent { display: none; }
+    @media (min-width: 1024px) { .nav .btn-accent { display: inline-flex; } }
+
+    .nav__burger {
+      display: flex; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    @media (min-width: 1024px) { .nav__burger { display: none; } }
+    .nav__burger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--light); transition: all 240ms;
+    }
+
+    /* ─── DRAWER ─── */
+    .drawer {
+      position: fixed; top: 0; right: 0;
+      width: 280px; height: 100%;
+      background: #1a1a1a;
+      border-left: 1px solid rgba(242,243,247,0.07);
+      z-index: 200;
+      transform: translateX(100%);
+      transition: transform 340ms var(--ease);
+      padding: 80px 32px 40px;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer a {
+      font-size: 1rem; color: rgba(242,243,247,0.75);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(242,243,247,0.05);
+      transition: color 180ms;
+    }
+    .drawer a:hover { color: var(--accent); }
+    .drawer__x {
+      position: absolute; top: 22px; right: 24px;
+      cursor: pointer;
+      font-size: 1.5rem; line-height: 1;
+      background: none; border: none; color: var(--mid);
+    }
+    .overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 150;
+      opacity: 0; pointer-events: none;
+      transition: opacity 340ms;
+    }
+    .overlay.open { opacity: 1; pointer-events: all; }
+
+    /* ─── 404 SECTION ─── */
+    .not-found {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+    }
+    .not-found__inner {
+      max-width: 600px;
+    }
+    .not-found__eyebrow {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 28px;
+    }
+    .not-found__eyebrow-line { width: 36px; height: 1px; background: var(--accent); }
+    .not-found__eyebrow-text {
+      font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500;
+    }
+    .not-found__number {
+      font-family: var(--font-d);
+      font-size: clamp(6rem, 18vw, 14rem);
+      font-weight: 500;
+      line-height: 0.9;
+      color: rgba(242,243,247,0.07);
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      user-select: none;
+    }
+    .not-found__heading {
+      font-family: var(--font-d);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--light);
+      margin-bottom: 20px;
+    }
+    .not-found__heading em { font-style: italic; color: var(--accent); }
+    .not-found__body {
+      font-size: 1rem;
+      color: rgba(242,243,247,0.55);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 40px;
+      max-width: 460px;
+    }
+    .not-found__links {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      margin-bottom: 48px;
+    }
+    .not-found__divider {
+      width: 48px; height: 1px;
+      background: rgba(242,243,247,0.1);
+      margin-bottom: 32px;
+    }
+    .not-found__pages-label {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--mid); font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .not-found__pages {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      list-style: none;
+    }
+    .not-found__pages a {
+      font-size: 0.78rem;
+      color: rgba(242,243,247,0.5);
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(242,243,247,0.12);
+      padding-bottom: 2px;
+      transition: color 180ms, border-color 180ms;
+    }
+    .not-found__pages a:hover {
+      color: var(--light);
+      border-color: rgba(242,243,247,0.4);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      padding: 60px 0 28px;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 768px) {
+      .footer__grid { grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; }
+    }
+    .footer__desc { font-size: 0.82rem; color: var(--mid); line-height: 1.75; margin-top: 4px; }
+    .footer__col-h {
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(242,243,247,0.35); font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .footer__links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer__links a { font-size: 0.82rem; color: var(--mid); transition: color 180ms; }
+    .footer__links a:hover { color: var(--light); }
+    .footer__bot {
+      border-top: 1px solid rgba(242,243,247,0.06);
+      padding-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    @media (min-width: 768px) {
+      .footer__bot { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+    }
+    .footer__copy { font-size: 0.7rem; color: rgba(107,115,121,0.55); }
+    .footer__legal-links {
+      display: flex; gap: 20px;
+      font-size: 0.7rem; color: rgba(107,115,121,0.55);
+    }
+    .footer__legal-links a:hover { color: var(--mid); }
+    .footer__disc { font-size: 0.68rem; color: rgba(107,115,121,0.4); line-height: 1.6; max-width: 480px; }
+
+    /* ─── MOBILE CTA ─── */
+    .mob-cta {
+      display: flex;
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 90;
+    }
+    @media (min-width: 1024px) { .mob-cta { display: none; } }
+    .mob-cta__call, .mob-cta__form {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 15px 12px;
+      font-family: var(--font-b); font-weight: 600;
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .mob-cta__call {
+      background: var(--surface);
+      color: var(--light);
+      border-top: 1px solid rgba(242,243,247,0.08);
+    }
+    .mob-cta__form {
+      background: var(--accent);
+      color: var(--dark);
+    }
+  </style>
+</head>
+<body>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
+
+<!-- DRAWER -->
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <button class="drawer__x" id="dx" aria-label="Close menu">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="practice-areas.html">Practice Areas</a>
+  <a href="about.html">About Cliff</a>
+  <a href="case-results.html">Case Results</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" style="color:var(--accent);margin-top:8px;">Free Consultation</a>
+  <a href="tel:9197446471" style="color:var(--mid);font-size:.82rem;margin-top:4px;">(919) 744-6471</a>
+</nav>
+
+<!-- NAV -->
+<header class="nav" id="nav" role="banner">
+  <div class="wrap">
+    <div class="nav__row">
+      <a class="nav__logo" href="index.html" aria-label="Salt City Defense home">
+        <img class="nav__logo-img" src="images/salt-city-defense-logo-white.png" alt="Salt City Defense" />
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="practice-areas.html">Practice Areas</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="case-results.html">Results</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav__end">
+        <a class="nav__phone" href="tel:9197446471">(919) 744-6471</a>
+        <a class="btn btn-accent" href="contact.html">Free Consultation</a>
+        <button class="nav__burger" id="nb" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 404 -->
+<main>
+  <section class="not-found">
+    <div class="wrap">
+      <div class="not-found__inner">
+        <div class="not-found__eyebrow">
+          <div class="not-found__eyebrow-line"></div>
+          <span class="not-found__eyebrow-text">Error 404</span>
+        </div>
+        <div class="not-found__number" aria-hidden="true">404</div>
+        <h1 class="not-found__heading">This page doesn't <em>exist.</em></h1>
+        <p class="not-found__body">The page you're looking for may have been moved, renamed, or removed. If you were looking for legal help, we're still here.</p>
+        <div class="not-found__links">
+          <a class="btn btn-accent btn-lg" href="contact.html"><span>Free Consultation</span></a>
+          <a class="btn btn-accent outline btn-lg" href="index.html"><span>Back to Home</span></a>
+        </div>
+        <div class="not-found__divider"></div>
+        <p class="not-found__pages-label">Or go directly to</p>
+        <ul class="not-found__pages">
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="dui.html">DUI Defense</a></li>
+          <li><a href="drug-crimes.html">Drug Crimes</a></li>
+          <li><a href="domestic-violence.html">Domestic Violence</a></li>
+          <li><a href="violent-crimes.html">Violent Crimes</a></li>
+          <li><a href="sex-crimes.html">Sex Crimes</a></li>
+          <li><a href="expungements.html">Expungements</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About Cliff</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="images/salt-city-defense-logo-white.png" alt="Salt City Defense" style="height:32px;width:auto;display:block;margin-bottom:14px;opacity:0.85;" />
+        <p class="footer__desc">Experienced criminal defense representation for individuals and families throughout Salt Lake City and Utah. Your freedom is worth fighting for.</p>
+      </div>
+      <div>
+        <div class="footer__col-h">Practice Areas</div>
+        <ul class="footer__links">
+          <li><a href="practice-areas.html">Criminal Defense</a></li>
+          <li><a href="dui.html">DUI Defense</a></li>
+          <li><a href="drug-crimes.html">Drug Crimes</a></li>
+          <li><a href="violent-crimes.html">Violent Crimes</a></li>
+          <li><a href="domestic-violence.html">Domestic Violence</a></li>
+          <li><a href="expungements.html">Expungements</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-h">Firm</div>
+        <ul class="footer__links">
+          <li><a href="about.html">About Cliff</a></li>
+          <li><a href="case-results.html">Case Results</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="tel:9197446471">(919) 744-6471</a></li>
+        </ul>
+        <div style="margin-top:22px;">
+          <div class="footer__col-h">Location</div>
+          <p style="font-size:.8rem;color:var(--mid);line-height:1.7;">445 E 200 S #130<br>Salt Lake City, UT 84111</p>
+          <p style="font-size:.75rem;color:rgba(107,115,121,.55);margin-top:8px;letter-spacing:0.04em;">Available 24 / 7</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <p class="footer__copy">&copy; 2025 Salt City Defense. All rights reserved.</p>
+      <div class="footer__legal-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="resources.html">Resources</a>
+      </div>
+      <p class="footer__disc">The information on this website is for general informational purposes only and does not constitute legal advice. Contacting Salt City Defense does not create an attorney-client relationship.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mob-cta" role="navigation" aria-label="Quick contact">
+  <a href="tel:9197446471" class="mob-cta__call">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.128.96.341 1.903.63 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.29 1.85.501 2.81.63A2 2 0 0122 14.92z"/></svg>
+    Call Now
+  </a>
+  <a href="contact.html" class="mob-cta__form">Free Consultation</a>
+</div>
+
+<script>
+  const nb = document.getElementById('nb');
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('overlay');
+  const dx = document.getElementById('dx');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    nb.setAttribute('aria-expanded', 'true');
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    nb.setAttribute('aria-expanded', 'false');
+  }
+
+  nb.addEventListener('click', openDrawer);
+  dx.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+</script>
+
+</body>
+</html>
