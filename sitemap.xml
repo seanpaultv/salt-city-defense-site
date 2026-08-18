@@ -112,12 +112,36 @@
   <!-- Blog hub -->
   <url>
     <loc>https://saltcitydefense.com/blog.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Blog articles -->
+  <url>
+    <loc>https://saltcitydefense.com/blog/first-48-hours-after-arrest-salt-lake-county.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://saltcitydefense.com/blog/utah-expungement-law-changes-2026.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://saltcitydefense.com/blog/marijuana-possession-defenses-utah.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://saltcitydefense.com/blog/marijuana-possession-charges-salt-lake-city-2026-law.html</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://saltcitydefense.com/blog/marijuana-possession-laws-utah-2026.html</loc>
     <lastmod>2026-01-15</lastmod>
