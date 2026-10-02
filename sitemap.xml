@@ -112,12 +112,36 @@
   <!-- Blog hub -->
   <url>
     <loc>https://saltcitydefense.com/blog.html</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Blog articles -->
+  <url>
+    <loc>https://saltcitydefense.com/blog/white-collar-crime-utah-explained.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://saltcitydefense.com/blog/domestic-violence-charges-utah-what-happens.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://saltcitydefense.com/blog/utah-theft-shoplifting-charges-2026.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://saltcitydefense.com/blog/assault-battery-charges-salt-lake-city-utah-law.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://saltcitydefense.com/blog/first-48-hours-after-arrest-salt-lake-county.html</loc>
     <lastmod>2026-08-18</lastmod>
