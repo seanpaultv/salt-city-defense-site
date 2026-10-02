@@ -240,7 +240,7 @@
 
     /* SERVICE AREA */
     .area-section { position: relative; padding: 56px 0; overflow: hidden; }
-    .area-section::before { content: ''; position: absolute; inset: 0; background: url('images/banner-wasatch-mtn.jpg') center 40% / cover no-repeat; filter: grayscale(30%); z-index: 0; }
+    .area-section::before { content: ''; position: absolute; inset: 0; background: url('images/banner-wasatch-mtn.webp') center 40% / cover no-repeat; filter: grayscale(30%); z-index: 0; }
     /* stronger overlay on mobile for legibility */
     .area-section::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(20,20,20,0.92) 0%, rgba(20,20,20,0.84) 50%, rgba(20,20,20,0.95) 100%); z-index: 1; }
     @media (min-width: 768px) { .area-section::after { background: linear-gradient(to bottom, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.78) 50%, rgba(20,20,20,0.92) 100%); } }
@@ -306,7 +306,8 @@
     .mob-cta__call { background: var(--accent); color: var(--dark); }
     .mob-cta__form { background: var(--surface); color: var(--light); }
   </style>
-  <link rel="icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CX7SFDXP85"></script>
