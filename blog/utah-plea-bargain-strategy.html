@@ -399,6 +399,8 @@
     .mob-cta a { flex: 1; padding: 15px; text-align: center; font-family: var(--font-b); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .mob-cta__call { background: var(--accent); color: var(--dark); }
     .mob-cta__form { background: var(--surface); color: var(--light); }
+    /* 4-card related grid: 2x2 instead of an orphaned 4th card */
+    @media (min-width: 600px) { .related__grid:has(> .pcard:nth-child(4)) { grid-template-columns: 1fr 1fr; } }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png" />
@@ -773,6 +775,23 @@
           <p class="pcard__excerpt">The Fifth Amendment protects you — but only if you use it correctly. Here is what you are legally required to say, and what never to volunteer.</p>
           <div class="pcard__foot">
             <time class="pcard__date" datetime="2025-04-19">Apr 19, 2025</time>
+            <div class="pcard__arrow" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard r">
+        <div class="pcard__inner">
+          <div class="pcard__top">
+            <span class="pcard__cat">Criminal Defense</span>
+            <span class="pcard__read">5 min</span>
+          </div>
+          <h2 class="pcard__title"><a href="utah-probation-violation-hearing.html">Accused of Violating Probation in Utah? How the Process Actually Works</a></h2>
+          <p class="pcard__excerpt">Accused of violating probation in Utah? See how violation hearings work, what the judge can do, and why your probation clock can stop running.</p>
+          <div class="pcard__foot">
+            <time class="pcard__date" datetime="2026-11-12">Nov 12, 2026</time>
             <div class="pcard__arrow" aria-hidden="true">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>

@@ -338,6 +338,8 @@
     .mob-cta a { flex: 1; padding: 15px; text-align: center; font-family: var(--font-b); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .mob-cta__call { background: var(--accent); color: var(--dark); }
     .mob-cta__form { background: var(--surface); color: var(--light); }
+    /* 4-card related grid: 2x2 instead of an orphaned 4th card */
+    @media (min-width: 600px) { .related__grid:has(> .pcard:nth-child(4)) { grid-template-columns: 1fr 1fr; } }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png" />
@@ -631,6 +633,23 @@
           <p class="pcard__excerpt">Many defendants waive the preliminary hearing without knowing what it is. For felony cases, this is often your first real opportunity to challenge the state's evidence.</p>
           <div class="pcard__foot">
             <time class="pcard__date" datetime="2025-03-14">Mar 14, 2025</time>
+            <div class="pcard__arrow" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard r">
+        <div class="pcard__inner">
+          <div class="pcard__top">
+            <span class="pcard__cat">Criminal Defense</span>
+            <span class="pcard__read">5 min</span>
+          </div>
+          <h2 class="pcard__title"><a href="active-warrant-utah-what-to-do.html">Think You Have a Warrant in Utah? What to Do Before an Officer Finds It for You</a></h2>
+          <p class="pcard__excerpt">Found out you have a warrant in Utah? Learn how bench warrants work, why failing to appear is its own charge, and how warrants get resolved.</p>
+          <div class="pcard__foot">
+            <time class="pcard__date" datetime="2026-11-12">Nov 12, 2026</time>
             <div class="pcard__arrow" aria-hidden="true">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
