@@ -1,0 +1,147 @@
+{
+  "purpose": "Single Redirect rules for saltcitydefense.com. The site is GitHub Pages behind Cloudflare, so _redirects is not supported and redirects live at the Cloudflare edge. This file documents them; it is not read by anything.",
+  "last_updated": "2026-11-13",
+  "plan_limit": "Cloudflare Free plan: 10 Single Redirect rules",
+  "slots": {
+    "used": 6,
+    "free": 4
+  },
+  "ruleset": {
+    "phase": "http_request_dynamic_redirect",
+    "ruleset_id": "66fcba6e5c6f4433af75b78c570ef825",
+    "evaluation": "top to bottom; the first matching rule redirects and stops"
+  },
+  "rules": [
+    {
+      "order": 1,
+      "rule_id": "65b7d1f322a34c1e904bc89d03b55f13",
+      "description": "SCD 1: trailing-slash variants -> .html (301)",
+      "enabled": true,
+      "action": "redirect",
+      "expression": "http.request.uri.path ne \"/\" and ends_with(http.request.uri.path, \"/\") and not (http.request.uri.path contains \".\") and not (http.request.uri.path in {\"/dui-defense/\" \"/criminal-defense/\" \"/our-firm/\"}) and ((http.request.uri.path wildcard \"/*/\" and not http.request.uri.path wildcard \"/*/*/\") or (http.request.uri.path wildcard \"/blog/*/\" and not http.request.uri.path wildcard \"/blog/*/*/\"))",
+      "status_code": 301,
+      "target": {
+        "type": "dynamic expression",
+        "value": "concat(\"https://saltcitydefense.com\", substring(http.request.uri.path, 0, -1), \".html\")"
+      },
+      "preserve_query_string": true
+    },
+    {
+      "order": 2,
+      "rule_id": "c603a528158c429ebf97335ed80e0765",
+      "description": "SCD 2: extensionless -> .html (301)",
+      "enabled": true,
+      "action": "redirect",
+      "expression": "http.request.uri.path ne \"/\" and not ends_with(http.request.uri.path, \"/\") and not (http.request.uri.path contains \".\") and not (http.request.uri.path in {\"/dui-defense\" \"/criminal-defense\" \"/our-firm\"}) and ((http.request.uri.path wildcard \"/*\" and not http.request.uri.path wildcard \"/*/*\") or (http.request.uri.path wildcard \"/blog/*\" and not http.request.uri.path wildcard \"/blog/*/*\"))",
+      "status_code": 301,
+      "target": {
+        "type": "dynamic expression",
+        "value": "concat(\"https://saltcitydefense.com\", http.request.uri.path, \".html\")"
+      },
+      "preserve_query_string": true
+    },
+    {
+      "order": 3,
+      "rule_id": "a593feed79b54b81aa515a60d311d751",
+      "description": "SCD 3: old WP DUI paths -> /dui.html (301)",
+      "enabled": true,
+      "action": "redirect",
+      "expression": "http.request.uri.path in {\"/dui-defense\" \"/dui-defense/\" \"/criminal-defense/dui\" \"/criminal-defense/dui/\" \"/criminal-defense/dui-defense\" \"/criminal-defense/dui-defense/\"}",
+      "status_code": 301,
+      "target": {
+        "type": "static",
+        "value": "https://saltcitydefense.com/dui.html"
+      },
+      "preserve_query_string": true
+    },
+    {
+      "order": 4,
+      "rule_id": "80e148aaa0224e089282fc109cf8644f",
+      "description": "SCD 4: old WP sex-crimes path -> /sex-crimes.html (301)",
+      "enabled": true,
+      "action": "redirect",
+      "expression": "http.request.uri.path in {\"/criminal-defense/sex-crimes\" \"/criminal-defense/sex-crimes/\"}",
+      "status_code": 301,
+      "target": {
+        "type": "static",
+        "value": "https://saltcitydefense.com/sex-crimes.html"
+      },
+      "preserve_query_string": true
+    },
+    {
+      "order": 5,
+      "rule_id": "c9f4529fefc04505a603071f74211b03",
+      "description": "SCD 5: old WP /criminal-defense/ -> /practice-areas.html (301)",
+      "enabled": true,
+      "action": "redirect",
+      "expression": "http.request.uri.path in {\"/criminal-defense\" \"/criminal-defense/\"}",
+      "status_code": 301,
+      "target": {
+        "type": "static",
+        "value": "https://saltcitydefense.com/practice-areas.html"
+      },
+      "preserve_query_string": true
+    },
+    {
+      "order": 6,
+      "rule_id": "2eb4ecd6d2484ca491a3fa8d3f43923a",
+      "description": "Strip trailing slash",
+      "enabled": true,
+      "action": "redirect",
+      "expression": "(http.request.full_uri wildcard r\"https://saltcitydefense.com/*/\")",
+      "status_code": 301,
+      "target": {
+        "type": "dynamic expression",
+        "value": "wildcard_replace(http.request.full_uri, r\"https://saltcitydefense.com/*/\", r\"https://saltcitydefense.com/${1}\")"
+      },
+      "preserve_query_string": true
+    }
+  ],
+  "design_notes": [
+    "Rules 1-5 are placed BEFORE 'Strip trailing slash' so the one-hop redirect wins.",
+    "Generic rules 1 and 2 match only paths with no dot anywhere, never '/', and only top-level paths or /blog/<slug>; sitemap.xml, robots.txt, images, css, js and every .html URL are never matched.",
+    "Rules 1 and 2 exclude /dui-defense, /criminal-defense and /our-firm (exact match) so rules 3 and 5 can handle the first two and /our-firm stays a plain 404.",
+    "Rules 3-5 are exact-match lists, with and without a trailing slash.",
+    "?page_id=, ?feed= and ?s= URLs are on '/', which no rule matches, so they are untouched."
+  ],
+  "intentionally_not_redirected": [
+    {
+      "path": "/index.html",
+      "note": "serves 200 with canonical '/'; internal links now point to '/'; no redirect by decision"
+    },
+    {
+      "path": "/our-firm",
+      "note": "old WordPress page; left as 404 by decision (would map to /about.html)"
+    },
+    {
+      "path": "/contact/salt-lake-city-office",
+      "note": "old WordPress page; left as 404 by decision (would map to /contact.html)"
+    },
+    {
+      "path": "/terms_conditions.html",
+      "note": "old WordPress page; left as 404 by decision (would map to /disclaimer.html)"
+    },
+    {
+      "path": "/?page_id=84 and /?page_id=90, /?feed=..., /?s=...",
+      "note": "serve the homepage with canonical '/'; page-id mapping unknown"
+    }
+  ],
+  "known_side_effects": [
+    "Any unknown top-level or /blog/<slug> path without a dot (for example /zzz) now returns one 301 to /zzz.html, which then 404s. Real pages are unaffected."
+  ],
+  "adding_a_new_blog_post": "No rule change needed: /blog/<new-slug> and /blog/<new-slug>/ are covered by rules 1 and 2 as soon as <new-slug>.html exists.",
+  "testing_method": "Each rule was first created with an extra condition `and any(http.request.headers[\"x-redirect-test\"][*] eq \"on\")`, tested with curl -H 'x-redirect-test: on', then the condition was removed and everything retested without the header. A new or changed rule should be staged the same way.",
+  "tested_on_2026-11-13": {
+    "urls_per_run": 110,
+    "gated_failures": 0,
+    "live_failures": 0,
+    "chains_longer_than_1_hop": 0,
+    "loops": 0
+  },
+  "rollback": {
+    "before_state": "The ruleset before this work held only 'Strip trailing slash'. A copy of that ruleset is kept outside this repo on the maintainer's machine (~/.cloudflare_scd_ruleset_rollback_2026-11-13.json).",
+    "disable_one_rule": "Cloudflare dashboard > Rules > Redirect Rules > toggle the rule off, or PATCH /zones/<ZONE_ID>/rulesets/<ruleset_id above>/rules/<rule_id> with the rule body and \"enabled\": false.",
+    "full_rollback": "Cloudflare dashboard > Rules > Redirect Rules > delete rules 1-5, or PUT /zones/<ZONE_ID>/rulesets/phases/http_request_dynamic_redirect/entrypoint with the rules from the saved before-state copy.",
+    "zone_id": "Find <ZONE_ID> on the zone's Overview page in the Cloudflare dashboard. It is intentionally not stored here. API calls need a zone-scoped token that is never stored in the repo."
+  }
+}
